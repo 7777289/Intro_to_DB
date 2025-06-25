@@ -6,14 +6,14 @@ def create_database():
         # Connect to MySQL server
         connection = mysql.connector.connect(
             host='localhost',
-            user='root',        
-            password='yourpassword'  
+            user='root',         # Change this if your MySQL username is different
+            password='yourpassword'  # Change this to your MySQL password
         )
 
         if connection.is_connected():
             cursor = connection.cursor()
 
-
+            # Use CREATE DATABASE IF NOT EXISTS (no SELECT or SHOW)
             cursor.execute("CREATE DATABASE IF NOT EXISTS alx_book_store")
             print("Database 'alx_book_store' created successfully!")
 
