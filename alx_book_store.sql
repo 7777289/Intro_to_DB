@@ -1,6 +1,5 @@
 
-CREATE DATABASE alx_book_store;
-
+CREATE DATABASE IF NOT EXISTS alx_book_store;
 USE alx_book_store;
 
 CREATE TABLE Authors (
@@ -30,6 +29,7 @@ CREATE TABLE Orders (
     order_date DATE NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES Customers(customer_id)
 );
+
 
 CREATE TABLE Order_Details (
     orderdetailid INT AUTO_INCREMENT PRIMARY KEY,
